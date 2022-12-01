@@ -124,13 +124,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.menuFade = menuFade;
-
 function menuFade() {
   var nav = document.querySelector(".navbar");
-
   function hover(e) {
     var _this = this;
-
     if (e.target.classList.contains('navbar__text')) {
       var link = e.target;
       var siblings = link.closest('.navbar').querySelectorAll('.navbar__text');
@@ -139,11 +136,9 @@ function menuFade() {
       });
     }
   }
-
   nav.addEventListener('mouseover', hover.bind(0.7));
   nav.addEventListener('mouseout', hover.bind(1));
 }
-
 ;
 },{}],"javascript/smoothScrolling.js":[function(require,module,exports) {
 "use strict";
@@ -152,11 +147,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.scroll = void 0;
-
 var scroll = function scroll() {
   document.querySelector('.navbar').addEventListener('click', function (e) {
-    e.preventDefault(); // Matching strategy
-
+    e.preventDefault();
+    // Matching strategy
     if (e.target.classList.contains('navbar__text')) {
       var id = e.target.getAttribute('href');
       document.querySelector(id).scrollIntoView({
@@ -165,7 +159,6 @@ var scroll = function scroll() {
     }
   });
 };
-
 exports.scroll = scroll;
 },{}],"javascript/revealSections.js":[function(require,module,exports) {
 "use strict";
@@ -174,32 +167,22 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.revealSections = revealSections;
-
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 function revealSections() {
   var allSections = document.querySelectorAll('.section');
-
   var revealSection = function revealSection(entries, observer) {
     var _entries = _slicedToArray(entries, 1),
-        entry = _entries[0];
-
+      entry = _entries[0];
     if (!entry.isIntersecting) return;
     entry.target.classList.remove('section--hidden');
     entry.target.classList.add('fadeUp');
     observer.unobserve(entry.target);
   };
-
   var sectionObserver = new IntersectionObserver(revealSection, {
     root: null,
     threshold: 0.15
@@ -208,7 +191,6 @@ function revealSections() {
     sectionObserver.observe(section);
   });
 }
-
 ;
 },{}],"javascript/slider.js":[function(require,module,exports) {
 "use strict";
@@ -217,67 +199,63 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.slider = void 0;
-
 var slider = function slider() {
   var slides = document.querySelectorAll('.slide');
   var btnLeft = document.querySelector('.slider__btn--left');
   var btnRight = document.querySelector('.slider__btn--right');
   var dotContainer = document.querySelector('.dots');
   var curSlide = 0;
-  var maxSlide = slides.length; // Functions
+  var maxSlide = slides.length;
+
+  // Functions
 
   var createDots = function createDots() {
     slides.forEach(function (_, i) {
       dotContainer.insertAdjacentHTML('beforeend', "<button class=\"dots__dot\" data-slide=\"".concat(i, "\"></button>"));
     });
   };
-
   var activateDot = function activateDot(slide) {
     document.querySelectorAll('.dots__dot').forEach(function (dot) {
       return dot.classList.remove('dots__dot--active');
     });
     document.querySelector(".dots__dot[data-slide=\"".concat(slide, "\"]")).classList.add('dots__dot--active');
   };
-
   var goToSlide = function goToSlide(slide) {
     slides.forEach(function (s, i) {
       return s.style.transform = "translateX(".concat(100 * (i - slide), "%)");
     });
-  }; // Next slide
+  };
 
-
+  // Next slide
   var nextSlide = function nextSlide() {
     if (curSlide === maxSlide - 1) {
       curSlide = 0;
     } else {
       curSlide++;
     }
-
     ;
     goToSlide(curSlide);
     activateDot(curSlide);
   };
-
   var prevSlide = function prevSlide() {
     if (curSlide === 0) {
       curSlide = maxSlide - 1;
     } else {
       curSlide--;
     }
-
     goToSlide(curSlide);
     activateDot(curSlide);
-  }; // init function
+  };
 
-
+  // init function
   var init = function init() {
     goToSlide(0);
     createDots();
     activateDot(0);
   };
+  init();
 
-  init(); // Event handlers 
-
+  // Event handlers 
   btnRight.addEventListener('click', nextSlide);
   btnLeft.addEventListener('click', prevSlide);
   document.addEventListener('keydown', function (e) {
@@ -285,17 +263,16 @@ var slider = function slider() {
     if (e.key === 'ArrowLeft') prevSlide();
     e.key === 'ArrowRight' && nextSlide(); // Short circuited version
   });
+
   dotContainer.addEventListener('click', function (e) {
     if (e.target.classList.contains('dots__dot')) {
       var slide = e.target.dataset.slide;
       goToSlide(slide);
       activateDot(slide);
     }
-
     ;
   });
 };
-
 exports.slider = slider;
 },{}],"javascript/hamburger.js":[function(require,module,exports) {
 "use strict";
@@ -304,48 +281,46 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.hamburgerMenu = hamburgerMenu;
-
 function hamburgerMenu() {
   var hamburger = document.querySelector(".hamburger");
   var navMenu = document.querySelector(".nav-menu");
   var navLink = document.querySelectorAll(".nav-item");
-
   var mobileMenu = function mobileMenu() {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
   };
-
   var closeMenu = function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
   };
+  hamburger.addEventListener("click", mobileMenu);
 
-  hamburger.addEventListener("click", mobileMenu); // navLink.forEach(n => n.addEventListener("click", closeMenu));
+  // navLink.forEach(n => n.addEventListener("click", closeMenu));
 }
 
-; // export default hamburgerMenu;
+;
+// export default hamburgerMenu;
 },{}],"javascript/index.js":[function(require,module,exports) {
 "use strict";
 
 var _menuFade = require("./menuFade.js");
-
 var _smoothScrolling = require("./smoothScrolling.js");
-
 var _revealSections = require("./revealSections.js");
-
 var _slider = require("./slider.js");
-
 var _hamburger = require("./hamburger.js");
-
 // Smooth scrolling
-(0, _smoothScrolling.scroll)(); // Menu fade animation
+(0, _smoothScrolling.scroll)();
 
-(0, _menuFade.menuFade)(); // Reveal sections
+// Menu fade animation
+(0, _menuFade.menuFade)();
 
-(0, _revealSections.revealSections)(); // slider
+// Reveal sections
+(0, _revealSections.revealSections)();
 
-(0, _slider.slider)(); // Hamburger
+// slider
+(0, _slider.slider)();
 
+// Hamburger
 (0, _hamburger.hamburgerMenu)();
 },{"./menuFade.js":"javascript/menuFade.js","./smoothScrolling.js":"javascript/smoothScrolling.js","./revealSections.js":"javascript/revealSections.js","./slider.js":"javascript/slider.js","./hamburger.js":"javascript/hamburger.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -375,7 +350,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53995" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55920" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
