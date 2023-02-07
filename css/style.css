@@ -201,6 +201,10 @@ button:focus {
     backface-visibility: hidden;
     overflow: hidden;
     transition: all 0.5s; }
+    @media only screen and (max-width: 37.5em) {
+      .projects__img {
+        transform: scale(0.9);
+        filter: blur(3px) brightness(40%); } }
   .projects__text {
     position: absolute;
     top: 50%;
@@ -212,6 +216,12 @@ button:focus {
     font-size: 1rem;
     padding: 1rem;
     transform: translate(-50%, 200%); }
+    @media only screen and (max-width: 37.5em) {
+      .projects__text {
+        transform: translate(0, 0);
+        opacity: 1;
+        top: 35px;
+        left: 0; } }
   .projects__caption {
     position: absolute;
     top: 50%;
@@ -223,6 +233,12 @@ button:focus {
     text-transform: uppercase;
     font-size: 2rem;
     transform: translate(-50%, -500%); }
+    @media only screen and (max-width: 37.5em) {
+      .projects__caption {
+        transform: translate(0, 0);
+        top: 0;
+        left: 0;
+        opacity: 1; } }
   .projects h4 {
     font-size: 1.7rem;
     color: #7ed56f; }
@@ -235,15 +251,9 @@ button:focus {
   .projects:hover .projects__caption {
     opacity: 1;
     transform: translate(-50%, -250%); }
-    @media only screen and (max-width: 37.5em) {
-      .projects:hover .projects__caption {
-        transform: translate(-50%, -190%); } }
   .projects:hover .projects__text {
     opacity: 1;
     transform: translate(-50%, -20%); }
-    @media only screen and (max-width: 37.5em) {
-      .projects:hover .projects__text {
-        transform: translate(-50%, -35%); } }
   .projects:hover .projects__img {
     transform: scale(0.9);
     filter: blur(3px) brightness(40%); }
