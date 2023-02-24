@@ -5,6 +5,10 @@
   animation-timing-function: ease-out;
 }
 
+.rotateBg {
+  animation: rotateBg 7s infinite;
+}
+
 .hidden {
   opacity: 0;
   transition: 0.3s ease-in;
@@ -13,6 +17,16 @@
 .unhide {
   opacity: 1;
   transition: 0.3s ease-in;
+}
+
+@keyframes rotateBg {
+  0% {
+    transform: rotate(-45deg)
+  }
+
+  100% {
+    transform: rotate(45deg)
+  }
 }
 
 @keyframes fadeUp {

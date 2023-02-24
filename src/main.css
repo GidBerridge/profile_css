@@ -1,12 +1,12 @@
 .fadeUp {
-  -webkit-animation-name: fadeUp;
-          animation-name: fadeUp;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  animation-name: fadeUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+.rotateBg {
+  animation: rotateBg 7s infinite;
 }
 
 .hidden {
@@ -19,34 +19,20 @@
   transition: 0.3s ease-in;
 }
 
-@-webkit-keyframes fadeUp {
+@keyframes rotateBg {
   0% {
-    opacity: 0;
+    transform: rotate(-45deg);
   }
   100% {
-    opacity: 1;
+    transform: rotate(45deg);
   }
 }
-
 @keyframes fadeUp {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
-  }
-}
-@-webkit-keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  80% {
-    transform: translateX(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
   }
 }
 @keyframes moveInLeft {
@@ -56,19 +42,6 @@
   }
   80% {
     transform: translateX(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-@-webkit-keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  80% {
-    transform: translateX(-10px);
   }
   100% {
     opacity: 1;
@@ -104,7 +77,6 @@
 }
 
 body {
-  background: #263546 !important;
   color: #fff !important;
   font-family: Raleway, Helvetica, sans-serif !important;
 }
@@ -114,7 +86,7 @@ a {
   text-decoration: none !important;
 }
 a:hover, a:active {
-  color: #eeb14e !important;
+  color: rgba(238, 177, 78, 0.4196078431) !important;
 }
 
 li {
@@ -131,13 +103,10 @@ ul {
 
 .heading-primary--main {
   font-size: 6rem;
-  color: #eeb14e;
-  -webkit-animation-name: moveInLeft;
-          animation-name: moveInLeft;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  color: rgba(238, 177, 78, 0.4196078431);
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 @media only screen and (max-width: 37.5em) {
   .heading-primary--main {
@@ -145,12 +114,9 @@ ul {
   }
 }
 .heading-primary--sub {
-  -webkit-animation-name: moveInRight;
-          animation-name: moveInRight;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 
 .soft-skills {
@@ -251,7 +217,7 @@ button:focus {
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 10px !important;
-  border: solid 2px #eeb14e !important;
+  border: solid 2px rgba(238, 177, 78, 0.4196078431) !important;
   position: relative;
   text-align: center;
   display: flex;
@@ -263,7 +229,7 @@ button:focus {
   left: 0;
 }
 .projects__card--about {
-  color: #eeb14e;
+  color: rgba(238, 177, 78, 0.4196078431);
   background: #263546;
   max-width: 45rem;
   padding: 1rem;
@@ -477,7 +443,7 @@ button:focus {
 }
 
 .dots__dot--active {
-  background-color: #eeb14e;
+  background-color: rgba(238, 177, 78, 0.4196078431);
   opacity: 1;
 }
 
@@ -515,7 +481,7 @@ button:focus {
   align-items: center;
 }
 .navbar__text {
-  color: #eeb14e !important;
+  color: rgba(238, 177, 78, 0.4196078431) !important;
   font-family: raleway, sans-serif;
   font-size: 1.5rem;
   padding: 0 1.5rem;
@@ -693,26 +659,21 @@ button:focus {
 }
 
 .fadeUp {
-  -webkit-animation-name: fadeUp;
-          animation-name: fadeUp;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  animation-name: fadeUp;
+  animation-delay: 0.5s;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
 }
 
 .background-light {
-  background: #fff !important;
+  background: rgba(225, 226, 226, 0.4470588235) !important;
   color: #263546 !important;
   background-size: 100vw !important;
 }
 
 .background-orange {
-  background: #eeb14e !important;
+  background: rgba(238, 177, 78, 0.4196078431) !important;
   color: #000 !important;
   background-size: cover;
 }
