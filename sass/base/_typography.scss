@@ -1,14 +1,13 @@
 .heading-primary {
   &--main {
-    font-size: 6rem;
-    color: $color-orange-cv;
-
+    font-size: 3rem;
+    
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
 
     @include respond(phone) {
-      font-size: 4.5rem;
+      font-size: 2rem;
     }
   }
 

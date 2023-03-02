@@ -2,12 +2,11 @@
   text-align: center;
 }
 
-.u-padding-top-bottom {
-  padding: 20vh 0;
-}
-
-.u-padding-top-bottom-big {
-  padding: 20vh 0 25vh 0;
+.u-border-top {
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  border-top: 1px solid #000;
 }
 
 .u-clip-path-skills {
