@@ -1,7 +1,8 @@
 .header {
-  background: $color-grey-cv;
+  background: $color-orange-cv;
   position: fixed;
   width: 100%;
+  top: 0;
   z-index: 3000;
   opacity: 0.9;
 }
@@ -20,10 +21,9 @@
   display: flex;
   justify-content: space-between !important;
   align-items: center;
-  // background-color: transparent;
 
   &__text {
-    color: $color-orange-cv !important;
+    color: $color-grey-dark !important;
     font-family: raleway, sans-serif;
     font-size: 1.5rem;
     padding: 0 1.5rem;

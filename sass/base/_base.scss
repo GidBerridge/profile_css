@@ -9,13 +9,14 @@
 }
 
 body {
-  background: $color-grey-cv !important;
-  color: $color-white !important;
+  background-color: #fff2d5 !important;
+  color: $color-grey-cv !important;
   font-family: Raleway, Helvetica, sans-serif !important;
 }
 
+
 a {
-  color: $color-white !important;
+  // color: $color-white !important;
   text-decoration: none !important;
 
   &:hover,

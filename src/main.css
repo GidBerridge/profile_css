@@ -1,12 +1,12 @@
 .fadeUp {
-  -webkit-animation-name: fadeUp;
-          animation-name: fadeUp;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  animation-name: fadeUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+.rotateBg {
+  animation: rotateBg 7s infinite;
 }
 
 .hidden {
@@ -19,34 +19,20 @@
   transition: 0.3s ease-in;
 }
 
-@-webkit-keyframes fadeUp {
+@keyframes rotateBg {
   0% {
-    opacity: 0;
+    transform: rotate(-45deg);
   }
   100% {
-    opacity: 1;
+    transform: rotate(45deg);
   }
 }
-
 @keyframes fadeUp {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
-  }
-}
-@-webkit-keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  80% {
-    transform: translateX(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
   }
 }
 @keyframes moveInLeft {
@@ -56,19 +42,6 @@
   }
   80% {
     transform: translateX(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-@-webkit-keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  80% {
-    transform: translateX(-10px);
   }
   100% {
     opacity: 1;
@@ -93,6 +66,121 @@
   transform: translateY(8rem);
 }
 
+@keyframes textAnim {
+  0% {
+    font-size: 80px;
+    fill: white;
+  }
+  10% {
+    font-size: 100px;
+    fill: red;
+  }
+  40% {
+    font-size: 70px;
+    fill: white;
+  }
+  100% {
+    font-size: 80px;
+    fill: white;
+  }
+}
+text tspan {
+  font-family: Helvetica, Arial;
+  font-weight: 900;
+  animation: textAnim 2s ease infinite;
+  -webkit-animation: textAnim 2s ease infinite;
+}
+
+#l2 {
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+}
+
+#l3 {
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+
+#l4 {
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+}
+
+#l5 {
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+
+#l6 {
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+}
+
+#l7 {
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+}
+
+#l8 {
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+}
+
+#l9 {
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+}
+
+#l10 {
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+}
+
+#l11 {
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+}
+
+#l12 {
+  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+}
+
+#l13 {
+  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+}
+
+#l14 {
+  animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+}
+
+#l15 {
+  animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+}
+
+#l16 {
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+}
+
+#l17 {
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+}
+
+#l18 {
+  animation-delay: 0.11s;
+  -webkit-animation-delay: 0.11s;
+}
+
+#l19 {
+  animation-delay: 0.11s;
+  -webkit-animation-delay: 0.11s;
+}
+
 *,
 *::before,
 *::after {
@@ -104,17 +192,16 @@
 }
 
 body {
-  background: #263546 !important;
-  color: #fff !important;
+  background-color: #fff2d5 !important;
+  color: #263546 !important;
   font-family: Raleway, Helvetica, sans-serif !important;
 }
 
 a {
-  color: #fff !important;
   text-decoration: none !important;
 }
 a:hover, a:active {
-  color: #eeb14e !important;
+  color: rgba(254, 207, 130, 0.4196078431) !important;
 }
 
 li {
@@ -130,27 +217,20 @@ ul {
 }
 
 .heading-primary--main {
-  font-size: 6rem;
-  color: #eeb14e;
-  -webkit-animation-name: moveInLeft;
-          animation-name: moveInLeft;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  font-size: 3rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 @media only screen and (max-width: 37.5em) {
   .heading-primary--main {
-    font-size: 4.5rem;
+    font-size: 2rem;
   }
 }
 .heading-primary--sub {
-  -webkit-animation-name: moveInRight;
-          animation-name: moveInRight;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 
 .soft-skills {
@@ -176,12 +256,11 @@ ul {
   text-align: center;
 }
 
-.u-padding-top-bottom {
-  padding: 20vh 0;
-}
-
-.u-padding-top-bottom-big {
-  padding: 20vh 0 25vh 0;
+.u-border-top {
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  border-top: 1px solid #000;
 }
 
 .u-clip-path-skills {
@@ -251,7 +330,7 @@ button:focus {
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 10px !important;
-  border: solid 2px #eeb14e !important;
+  border: solid 2px rgba(254, 207, 130, 0.4196078431) !important;
   position: relative;
   text-align: center;
   display: flex;
@@ -263,7 +342,7 @@ button:focus {
   left: 0;
 }
 .projects__card--about {
-  color: #eeb14e;
+  color: rgba(254, 207, 130, 0.4196078431);
   background: #263546;
   max-width: 45rem;
   padding: 1rem;
@@ -477,7 +556,7 @@ button:focus {
 }
 
 .dots__dot--active {
-  background-color: #eeb14e;
+  background-color: rgba(254, 207, 130, 0.4196078431);
   opacity: 1;
 }
 
@@ -489,9 +568,10 @@ button:focus {
 }
 
 .header {
-  background: #263546;
+  background: rgba(254, 207, 130, 0.4196078431);
   position: fixed;
   width: 100%;
+  top: 0;
   z-index: 3000;
   opacity: 0.9;
 }
@@ -515,7 +595,7 @@ button:focus {
   align-items: center;
 }
 .navbar__text {
-  color: #eeb14e !important;
+  color: #2a2a2a !important;
   font-family: raleway, sans-serif;
   font-size: 1.5rem;
   padding: 0 1.5rem;
@@ -637,6 +717,7 @@ button:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: black;
 }
 .footer__text {
   display: flex;
@@ -693,26 +774,21 @@ button:focus {
 }
 
 .fadeUp {
-  -webkit-animation-name: fadeUp;
-          animation-name: fadeUp;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  animation-name: fadeUp;
+  animation-delay: 0.5s;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
 }
 
 .background-light {
-  background: #fff !important;
+  background: rgba(225, 226, 226, 0.4470588235) !important;
   color: #263546 !important;
   background-size: 100vw !important;
 }
 
 .background-orange {
-  background: #eeb14e !important;
+  background: rgba(254, 207, 130, 0.4196078431) !important;
   color: #000 !important;
   background-size: cover;
 }

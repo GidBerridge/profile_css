@@ -23,7 +23,8 @@
     <title>Gideon Berridge Profile</title>
     <link rel="stylesheet" href="src/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script type="module" defer src="javascript/index.js"></script>
 </head>
 
@@ -41,9 +42,6 @@
                         <a href="#projects" class="navbar__text">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#skills" class="navbar__text">Skills</a>
-                    </li>
-                    <li class="nav-item">
                         <a href="#contact" class="navbar__text">Contact</a>
                     </li>
                 </ul>
@@ -55,61 +53,69 @@
             </nav>
         </header>
     </section>
-    <div class="d-flex justify-content-center flex-column u-center-text">
+    
+    <div class="container u-center-text">
         <!-- Title -->
         <section id="home">
-            <div class="about-title u-padding-top-bottom">
-                <h1 class="heading-primary--main">Gideon Berridge</h1>
-                <h2 class="u-center-text heading-primary--sub">Full Stack Developer</h2>
-            </div>
+   
         </section>
         <!-- About -->
-        <section id="about" class="background-light u-clip-path-about section">
-            <div class="u-padding-top-bottom-big">
-                <!-- <h2 class="mb-5">About</h2> -->
-                <div class="d-flex justify-content-center">
-                    <div class="projects__card projects__card--about">
-                        <h4>About</h4>
-                        <div>
-                            <p class="about-sub">
-                                A London (UK) based junior full stack developer looking for a new challenge after working as a front end developer for the last year.
-                            </p>
-                        </div>
-                        <p style="text-align: left;" class="px-3">
-                            Passionate about React, JavaScript, Ruby and Python, I would love my next role to include one or more of these. I also have considerable experience of HTML, CSS, Sass, Bootstrap, Django, Adobe CC, MVC, Github, Heroku and Firbase.
-                            <br>
-                            <br> Aside from coding I also love music and playing instruments, travel and tinkering with Raspberry Pi's and Arduinos.
-                            <p class="">
-                                <a href="./text/GideonBerridge.pdf" download="Gideon_Berridge_CV" class="projects__card--download projects__card--icons">
-                                    <img src="./img/download_2.png" style="filter: invert(100%);" class="projects__card--download-img projects__card--icons"> Download CV
-                                </a>
-                            </p>
-                    </div>
+        <section id="about" class="section">
+            <div class="">
+                <div class="pt-5 mt-5 d-flex flex-column align-items-center">
+                    <div class="u-border-top col-8"></div>
+                    <h1 class="heading-primary--main">Gid Berridge</h1>
+                    <svg width="600" height="200">
+                        <text x="300" y="125" text-anchor="middle">
+                            <tspan id="l1">F</tspan>
+                            <tspan id="l2">R</tspan>
+                            <tspan id="l3">O</tspan>
+                            <tspan id="l4">N</tspan>
+                            <tspan id="l5">T</tspan>
+                            <tspan id="l6"> </tspan>
+                            <tspan id="l7">E</tspan>
+                            <tspan id="l8">N</tspan>
+                            <tspan id="l9">D</tspan>
+                            <tspan id="l10"> </tspan>
+                            <tspan id="l11">D</tspan>
+                            <tspan id="l12">E</tspan>
+                            <tspan id="l13">V</tspan>
+                            <tspan id="l14">E</tspan>
+                            <tspan id="l15">L</tspan>
+                            <tspan id="l16">O</tspan>
+                            <tspan id="l17">P</tspan>
+                            <tspan id="l18">E</tspan>
+                            <tspan id="l19">R</tspan>
+                        </text>
+                    </svg>
+                </div>
+                <div class="d-flex justify-content-center projects-text">
+                    <p class="px-3">
+                        I make websites.
+                        <br>
+                        <br>In my free time I enjoy upcycling old furniture, art and playing bass guitar and other musical instruments.
+                        
+                    </p>
+                </div>
+                <div>
+                    <p class="">
+                        <a href="./text/GideonBerridge.pdf" download="Gideon_Berridge_CV" class="projects__card--download">
+                            <img src="./img/download_2.png" style="" class="projects__card--download-img "> Download CV
+                        </a>
+                    </p>
                 </div>
             </div>
         </section>
+
         <!-- Projects -->
         <section id="projects" class="section">
             <div class="u-padding-top-bottom">
                 <h3 class="u-center-text mb-5">Projects and Tutorials</h3>
                 <div class="projects-text mb-5">
                     I have built sites using the MVC structure, Agile workflow, Sass, CSS animation, flexbox, CSS grid, AJAX, API calls, Parcel and web scraping. Some of these techniques are in use in this site. Others have been used in the projects and tutorials.
+
                 </div>
                 <div class="slider">
-                    <!-- <div class="slide">
-                    <a href="http:\\vinyltracer.com" target="blank" class=" projects__card projects projects__card--slider">
-                      <img src="img/vinyltracer_screenshot.jpg" alt="Vinyl tracer homepage screenshot" class="projects__img" />
-                      <h2 class="projects__caption">Vinyl Tracer</h2>
-                      <div class="projects__text">
-                        <h4>Ruby on rails / SCSS / PostgreSQL / Bootstrap</h4>
-                        <p class="">Working prototype of a music suggestion app that uses real world music trivia events to connect acts
-                          via web scraping and API's.
-                        </p>
-                      </div>
-                    </a>
-                    <a href="https://github.com/lizmtobin/vinyl_tracer" target="blank" class="slider__icon"><img
-                        src="./img/github.svg" alt="GitHub icon" class="u-filter-invert"></a>
-                  </div> -->
                     <div class="slide">
                         <a href="http:\\officialrefuge.com" target="blank" class=" projects__card projects projects__card--slider">
                             <img src="img/refuge_screenshot.png" alt="Refuge band homepage screenshot" class="projects__img">
@@ -189,112 +195,14 @@
                             <img src="./img/github.svg" alt="GitHub icon" class="u-filter-invert">
                         </a>
                     </div>
-                    <!-- <div class="slide">
-                                <a href="https://gidberridge.github.io/tutorials/" target="blank" class=" projects__card projects projects__card--slider">
-                                    <img src="img/tutorials_screenshot.jpg" alt="Tutorials homepage screenshot" class="projects__img">
-                                    <h2 class="projects__caption">Tutorials Page</h2>
-                                    <div class="projects__text">
-                                        <h4>React / JavaScript / SCSS</h4>
-                                        <p>
-                                            Link to tutorials page that showcases front end techniques from various courses I've completed.
-                                        </p>
-                                    </div>
-                                </a>
-                                <a href="https://github.com/GidBerridge/tutorials" target="blank" class="slider__icon">
-                                    <img src="./img/github.svg" alt="GitHub icon" class="u-filter-invert">
-                                </a>
-                            </div> -->
+
                     <button class="slider__btn slider__btn--left">&larr;</button>
                     <button class="slider__btn slider__btn--right">&rarr;</button>
                     <div class="dots"></div>
                 </div>
             </div>
         </section>
-        <!-- Skills - short section thumbnails of languauge icons -->
-        <section id="skills" class="u-padding-top-bottom  background-orange u-clip-path-skills section">
-            <h3 class="u-center-text mb-5">Technical Skills</h3>
-            <div class="d-flex justify-content-center">
-                <div class="grid">
-                    <div class="grid__column">
-                        <div class="grid__title grid__title--languages">Languages</div>
-                        <div class="grid__item">
-                            <img src="./img/JS.png" alt="JavaScript icon">
-                            <div>JavaScript</div>
-                        </div>
-                        <div class="grid__item">
-                            <img src="./img/CSS.png" alt="CSS icon">
-                            <div>CSS</div>
-                        </div>
-                        <div class="grid__item">
-                            <img src="./img/HTML.png" alt="HTML icon">
-                            <div>HTML</div>
-                        </div>
-                        <div class="grid__item">
-                            <img src="./img/Ruby.png" alt="Ruby icon">
-                            <div>Ruby</div>
-                        </div>
-                        <div class="grid__item">
-                            <img src="./img/Python.png" alt="Python icon">
-                            <div>Python</div>
-                        </div>
-                    </div>
-                    <div class="grid__column">
-                        <div class="grid__title grid__title--frameworks">Frameworks</div>
-                        <div class="grid__item">
-                            <img src="./img/Rails.png" alt="Rails icon">
-                            <div>Rails</div>
-                        </div>
-                        <div class="grid__item">
-                            <img src="./img/sass.png" alt="Sass icon">
-                            <div>Sass</div>
-                        </div>
-                        <div class="grid__item">
-                            <img src="./img/bootstrap.png" alt="Bootstrap icon">
-                            <div>Bootstrap</div>
-                        </div>
-                        <div class="grid__item">
-                            <img src="./img/React.png" alt="React icon">
-                            <div>React</div>
-                        </div>
-                    </div>
-                    <div class="grid__column">
-                        <div class="grid__title grid__title--tools">Tools</div>
-                        <div class="grid__item">
-                            <img src="./img/github.svg" alt="GitHub icon">
-                            <div>Github</div>
-                        </div>
-                        <div class="grid__item">
-                            <img src="./img/Heroku.png" alt="Heroku icon">
-                            <div>Heroku</div>
-                        </div>
-                        <div class="grid__item">
-                            <img src="./img/postgresql.png" alt="PostgreSQL icon">
-                            <div>PostgreSQL</div>
-                        </div>
-                        <div class="grid__item">
-                            <img src="./img/Figma.png" alt="Figma icon">
-                            <div>Figma</div>
-                        </div>
-                        <div class="grid__item">
-                            <img src="./img/wordpress.svg" alt="Wordpress icon">
-                            <div>Wordpress</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- soft skills -->
-            <h3 class="u-center-text soft-skills">Soft Skills</h3>
-            <div class="soft-skills__text">
-                <ul>
-                    <li>Communication</li>
-                    <li>Teamwork</li>
-                    <li>Probem Solving</li>
-                    <li>Adaptability</li>
-                    <li>Project Management</li>
-                    <li>Time Management</li>
-                </ul>
-            </div>
-        </section>
+
         <!-- Footer -->
         <section id="contact" class="section">
             <footer class="footer">
@@ -310,9 +218,7 @@
                                             </a>
                                         </address>
                             </div>
-                            <div class="footer__text--phone">
-                                <img src="./img/phone.png" alt="Phone icon" class="u-filter-invert" style="width: 2rem;"> (+44) 7989 654036
-                            </div>
+                        
                         </div>
                         <div class="d-flex justify-content-center w-100">
                             <div class="footer__icons mt-3">
@@ -331,7 +237,19 @@
                     </div>
             </footer>
         </section>
-        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script>
+        var spans = document.querySelectorAll("tspan");
+        var i = 0;
+        for (i = 0; i < spans.length; i++) {
+            if (window.CP.shouldStopExecution(0)) break;
+            spans[i].setAttribute("rotate", 10 * Math.random() - 5);
+        } window.CP.exitedLoop(0);
+    </script>
 </body>
 
 </html>
