@@ -343,13 +343,24 @@ text tspan {
   width: 500px;
   text-align: center;
   color: #b9dfff;
-  color: #fff;
   font-family: "Zefani";
-  font-family: "Abril Fatface";
   margin: 3rem auto;
   position: relative;
   padding: 2rem 0 9rem;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff, 0 0 35px #228dff, 0 0 40px #228dff;
+  animation-name: fadeUpSlow;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
+
+    & a {
+        color: #fff;
+
+        &:hover,
+          &:active {
+            color: #130378 !important;
+          }
+    }
+    
 }
 
 
@@ -358,10 +369,10 @@ text tspan {
   text-align: center;
   width: 450px;
   position: absolute;
-  bottom: 15rem;
+  bottom: 13rem;
   left: calc(50% - 225px);
   margin: 0 auto;
-  font-size: 7rem;
+  font-size: 6rem;
   opacity: 1;
   transition: opacity 0.3s ease;
   font-family: monospace;
