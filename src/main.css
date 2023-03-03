@@ -1,8 +1,15 @@
 .fadeUp {
   animation-name: fadeUp;
   animation-duration: 1s;
-  animation-fill-mode: both;
+  animation-fill-mode: forwards;
   animation-timing-function: ease-out;
+}
+
+.fadeUpNeon {
+  animation-name: fadeUp;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
 }
 
 .rotateBg {
@@ -29,6 +36,9 @@
 }
 @keyframes fadeUp {
   0% {
+    opacity: 0;
+  }
+  99% {
     opacity: 0;
   }
   100% {
@@ -202,6 +212,24 @@ text tspan {
   transform: translateX(50px) translateY(50px);
 }
 
+.neon {
+  font-size: 3rem;
+  color: white;
+  font-family: "Merienda", cursive;
+  animation-name: glow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0px 0px 5px #fff, 0px 0px 5px #614ad3;
+  }
+  to {
+    text-shadow: 0px 0px 20px #fff, 0px 0px 20px #614ad3;
+  }
+}
 *,
 *::before,
 *::after {
