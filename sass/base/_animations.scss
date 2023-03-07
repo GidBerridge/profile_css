@@ -356,9 +356,9 @@ text tspan {
         color: #fff;
 
         &:hover,
-          &:active {
-            color: #130378 !important;
-          }
+        &:active {
+          color: #130378 !important;
+        }
     }
     
 }
@@ -381,6 +381,88 @@ text tspan {
   transform-origin: center;
   -webkit-animation: bounce 3s cubic-bezier(0.37, 0, 0.21, 1.02) infinite, fonts 5s linear infinite;
   animation: bounce 3s cubic-bezier(0.37, 0, 0.21, 1.02) infinite, fonts 5s linear infinite;
+}
+
+
+// Animated path I make websites
+
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
+
+
+
+h2 {
+  position: relative;
+  font-family: Inconsolata, monospace;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  color: #d7691b;
+
+  // Dimensions of original path
+  width: 515px;
+  height: 168px;
+
+  transform: scale(var(--x, 1));
+  transform-origin: var(--o, center);
+  margin: 0 auto;
+}
+
+.path{
+  .char {
+      --i: calc(50% / var(--char-total));
+      offset-path: path('M.4 84.1s127.4 188 267.7 0 247.3 0 247.3 0');
+      offset-distance: calc(var(--char-index) * 1.2rem);
+      position: absolute;
+      animation: move 1500ms infinite alternate forwards var(--delay, 0ms);
+    }
+}
+
+
+
+@keyframes move {
+  100% {
+    --i: 2rem;
+    offset-distance: calc((var(--char-index) * 1.2rem) + 12rem);
+  }
+}
+
+
+// Bounce animation
+
+.bounce-it {
+    color: #130378;
+    font-size: 3rem;
+  .char {
+    line-height: 1;
+    transform-origin: center bottom;
+    animation-name: bounce-char;
+    animation-timing-function: cubic-bezier(.77, .02, .11, .97);
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-delay: calc(0.05s * var(--char-index));
+    animation-duration: calc(0.2s + (0.03s * var(--char-total)));
+    
+  }
+
+  &:hover .char {
+
+    animation-name: bounce-char;
+  }
+}
+
+@keyframes bounce-end {
+  to {
+    transform: translateY(0%) scale(1);
+  }
+}
+
+@keyframes bounce-char {
+  20% {
+    transform: translateY(0%) scale(1.3, .8);
+  }
+
+  70% {
+    transform: translateY(-40%) scale(.8, 1.2);
+  }
 }
 
 

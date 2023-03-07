@@ -31,6 +31,9 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <script type="module" defer src="javascript/index.js"></script>
 </head>
 
@@ -69,7 +72,7 @@
         <section id="about" class="">
             <div class="">
                 <div class="pt-5 mt-5 d-flex flex-column align-items-center">
-                    <div class="u-border-top col-8"></div>
+                    
                     <div class="heading-primary heading-primary--main">Hi! I'm</div>
 
                     <div class="col-12 justify-content-center">
@@ -110,12 +113,16 @@
                     <div>
                         <div class="neon">Developer</div>
                     </div>
-                    <div class="d-flex justify-content-center projects-text my-5">
-                        <p class="px-3">
-                            I make websites.
-                            <br>
-                        </p>
+
+                    <div class="d-flex justify-content-center projects-text path">
+                        <h2 data-splitting>I make websites</h2>
                     </div>
+
+                    <div class="d-flex justify-content-center ">
+                        <p class="bounce-it" data-splitting>Look Good!</p>
+                        <!-- <h1 class="stretch-it" data-splitting>Stretch Effect</h1> -->
+                    </div>
+
                     <div class="download-text mt-5">
                         <a href="./text/GideonBerridge.pdf" download="Gideon_Berridge_CV" class="">
                             <span>Download</span>
@@ -236,11 +243,11 @@
                         <div class="footer__text--contact-details">
                             <div class="footer__text--email">
                                 <address>
-                                            <a href="mailto:gid.berridge@gmail.com" class="footer__icons--items">
-                                                <img src="./img/email.png" class="u-filter-invert" style="width: 2rem;">
-                                                gid.berridge@gmail.com
-                                            </a>
-                                        </address>
+                                    <a href="mailto:gid.berridge@gmail.com" class="footer__icons--items">
+                                        <img src="./img/email.png" class="u-filter-invert" style="width: 2rem;">
+                                        gid.berridge@gmail.com
+                                    </a>
+                                </address>
                             </div>
                         
                         </div>
