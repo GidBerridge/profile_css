@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap);
-@import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
 .fadeUp {
   animation-name: fadeUp;
   animation-delay: 0.5s;
@@ -262,7 +261,7 @@ text tspan {
   padding: 2rem 0 9rem;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff, 0 0 35px #228dff, 0 0 40px #228dff;
   animation-name: fadeUpSlow;
-  animation-duration: 8s;
+  animation-duration: 12s;
   animation-iteration-count: 1;
 }
 .download-text a {
@@ -290,44 +289,68 @@ text tspan {
   animation: bounce 3s cubic-bezier(0.37, 0, 0.21, 1.02) infinite, fonts 5s linear infinite;
 }
 
-h2 {
+.make*:before, .make*:after {
+  box-sizing: border-box;
   position: relative;
-  font-family: Inconsolata, monospace;
-  font-size: 2.8rem;
-  text-transform: uppercase;
-  color: #d7691b;
-  width: 515px;
-  height: 168px;
-  transform: scale(var(--x, 1));
-  transform-origin: var(--o, center);
-  margin: 0 auto;
+}
+.make p {
+  font-weight: 900;
+  font-size: 5rem;
+}
+.make p.splitting .char {
+  visibility: hidden;
+}
+.make p.splitting .char::before, .make p.splitting .char::after {
+  visibility: visible;
+}
+.make p.splitting .char::before {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+          clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+.make p.splitting .char::after {
+  -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+          clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  animation-name: fall 3s cubic-bezier(0.8, 0, 0.9, 0.4) forwards;
+  animation-delay: calc(0.1s * var(--char-index));
+  transform-origin: 100% 50%;
 }
 
-.path .char {
-  --i: calc(50% / var(--char-total));
-  offset-path: path("M.4 84.1s127.4 188 267.7 0 247.3 0 247.3 0");
-  offset-distance: calc(var(--char-index) * 1.2rem);
-  position: absolute;
-  animation: move 1500ms infinite alternate forwards var(--delay, 0ms);
-}
-
-@keyframes move {
+@keyframes fall {
+  0%, 20% {
+    transform: none;
+  }
+  70% {
+    transform: translateY(100vh) rotate(-0.5turn);
+    transform-origin: 50% 50%;
+    opacity: 1;
+  }
+  71% {
+    opacity: 0;
+  }
+  72% {
+    transform: scaleY(0);
+  }
+  90% {
+    transform: scale(1);
+  }
   100% {
-    --i: 2rem;
-    offset-distance: calc(var(--char-index) * 1.2rem + 12rem);
+    opacity: 1;
   }
 }
+/* ---------------------------------- */
 .bounce-it {
   color: #130378;
   font-size: 3rem;
+  animation-name: fadeUpSlow;
+  animation-duration: 10s;
 }
 .bounce-it .char {
   line-height: 1;
   transform-origin: center bottom;
   animation-name: bounce-char;
   animation-timing-function: cubic-bezier(0.77, 0.02, 0.11, 0.97);
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
+  animation-iteration-count: 17;
+  animation-fill-mode: forwards;
   animation-delay: calc(0.05s * var(--char-index));
   animation-duration: calc(0.2s + 0.03s * var(--char-total));
 }
@@ -359,7 +382,7 @@ h2 {
 }
 
 body {
-  background-color: #fff2d5 !important;
+  background-color: #fffdf3 !important;
   color: #263546 !important;
   font-family: Raleway, Helvetica, sans-serif !important;
 }
@@ -740,7 +763,7 @@ button:focus {
 }
 
 .header {
-  background: rgba(254, 207, 130, 0.4196078431);
+  background: #2a2a2a;
   position: fixed;
   width: 100%;
   top: 0;
