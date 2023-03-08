@@ -89,7 +89,7 @@
 @keyframes textAnim {
   0% {
     font-size: 70px;
-    fill: white;
+    fill: #713814;
   }
 
   10% {
@@ -99,12 +99,12 @@
 
   40% {
     font-size: 60px;
-    fill: white;
+    fill: #713814;
   }
 
   100% {
     font-size: 70px;
-    fill: white;
+    fill: #713814;
   }
 }
 
@@ -388,72 +388,34 @@ text tspan {
 
 
 
-.make {
-
-
-  &*:before,
-  &*:after {
-      box-sizing: border-box;
-      position: relative;
-    }
-  p {
-    font-weight: 900;
-    font-size: 5rem;
-    
-
-    &.splitting .char {
-      visibility: hidden;
-
-
-      &::before,
-      &::after {
-        visibility: visible;
-      }
-
-      &::before {
-        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-        
+.pull-in {
+  font-size: 4rem;
+  color: #130378;
+  animation-name: fadeUpSlow;
+  animation-duration: 8s;
   
-      }
-
-      &::after {
-              clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
-              animation-name: fall 3s cubic-bezier(0.8, 0, 0.9, 0.4) forwards;           
-              animation-delay: calc(0.1s * var(--char-index));
-              transform-origin: 100% 50%;
-      }
-    }
-  }
+    .char {
+      line-height: 1;
+      transform-origin: center bottom;
+      animation-name: pull-char;
+      animation-timing-function: cubic-bezier(.77, .02, .11, .97);
+      animation-iteration-count: 11;
+      animation-fill-mode: forwards;
+      animation-delay: calc(0.05s * var(--char-index));
+      animation-duration: calc(0.2s + (0.03s * var(--char-total)));
 }
 
-@keyframes fall {
-
-  0%,
+@keyframes pull-char {
   20% {
-    transform: none;
+    transition: transform 1s cubic-bezier(.8, 0, .2, 1);
+    transition-delay: calc(0.2s * (1 - var(--distance-percent)));
   }
 
   70% {
-    transform: translateY(100vh) rotate(-0.5turn);
-    transform-origin: 50% 50%;
-    opacity: 1;
+    transition-delay: calc(0.2s * var(--distance-percent));
+    transform: scale(0.5) translateX(calc(-1.5em * var(--distance-sine)));
   }
-
-  71% {
-    opacity: 0;
-  }
-
-  72% {
-    transform: scaleY(0);
-  }
-
-  90% {
-    transform: scale(1);
-  }
-
-  100% {
-    opacity: 1;
-  }
+}
 }
 
 /* ---------------------------------- */
