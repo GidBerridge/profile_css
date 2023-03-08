@@ -855,7 +855,6 @@ button:focus {
 }
 .project-section .tiles {
   padding: 0;
-  background: #fff;
   clear: both;
   display: none;
   float: none;
