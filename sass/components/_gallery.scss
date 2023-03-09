@@ -37,6 +37,7 @@ $lg: 992px;
     width: 100%;
     position: relative;
     height: 300px;
+    
 
     .left,
     .middle,
@@ -50,6 +51,7 @@ $lg: 992px;
         padding: 30px;
         text-align: center;
         overflow: hidden;
+        // border-radius: 5px;
 
         @include transition;
 
@@ -128,6 +130,7 @@ $lg: 992px;
         clear: both;
         display: none;
         float: none;
+        
 
         img {
             width: 50%;
