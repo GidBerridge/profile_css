@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <script type="module" defer src="javascript/index.js"></script>
+    
 </head>
 
 <body>
@@ -77,7 +78,7 @@
 
                     <div class="col-12 justify-content-center">
                         <div>
-                            <ul class="fly-in hidden">
+                            <ul class="fly-in hidden my-4">
                                 <li>G</li>
                                 <li>I</li>
                                 <li>D</li>
@@ -95,7 +96,7 @@
                     </div>
 
                     <div class="heading-primary heading-primary--sub">I'm a</div>
-                    <div class="fadeUp col-12">
+                    <div class="fadeUp col-12 my-4 frontend">
                         <svg width="100%" height="87">
                             <text x="50%" y="65" text-anchor="middle">
                                 <tspan id="l1">F</tspan>
@@ -114,39 +115,181 @@
                         <div class="neon">Developer</div>
                     </div>
 
-                    <div class="d-flex justify-content-center projects-text path">
-                        <h2 data-splitting>I make websites</h2>
+                    <div class="my-4">
+                        <p class="pull-in" data-splitting>
+                            I Make Websites
+                        </p>
                     </div>
+                    
 
-                    <div class="d-flex justify-content-center ">
+                    <div class="d-flex justify-content-center mb-4">
                         <p class="bounce-it" data-splitting>Look Good!</p>
-                        <!-- <h1 class="stretch-it" data-splitting>Stretch Effect</h1> -->
+                        
                     </div>
-
-                    <div class="download-text mt-5">
-                        <a href="./text/GideonBerridge.pdf" download="Gideon_Berridge_CV" class="">
-                            <span>Download</span>
-                            <span> My</span>
-                            <span> CV</span>
-                        </a>
-                        <div class="scroll-more">↓</div>
-                    </div>
+                    
                 </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <div class="col-10 mt-5">
+                    <div class="contact__border"></div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <!-- skills -->
+            <div class="d-flex justify-content-center ">
+                <div class="d-flex justify-content-center flex-wrap col-10">
+                    <div class="skills-card">
+                        <img src="img/HTML.png" alt="">
+                    </div>
+                    <div class="skills-card">
+                        <img src="img/css3-logo.png" alt="">
+                    </div>
+                    <div class="skills-card">
+                        <img src="img/JS.png" alt="">
+                    </div>
+                    <div class="skills-card">
+                        <img src="img/React.png" alt="">
+                    </div>
+                    <div class="skills-card">
+                        <img src="img/Ruby.png" alt="">
+                    </div>
+                    <div class="skills-card">
+                        <img src="img/Rails.png" alt="">
+                    </div>
+                    <div class="skills-card">
+                        <img src="img/sass.png" alt="">
+                    </div>
+                    <div class="skills-card">
+                        <img src="img/bootstrap.png" alt="">
+                    </div>
+                    <div class="skills-card">
+                        <img src="img/photoshop.png" alt="">
+                    </div>
+                    <!-- <div class="skills-card">
+                        <img src="img/wordpress.svg" alt="">
+                    </div> -->
+                </div>
+            </div>
                 
+        </section>
 
                 
-            </div>
         </section>
 
         <!-- Projects -->
         <section id="projects" class="section">
             <div class="u-padding-top-bottom">
-                <h3 class="u-center-text mb-5">Projects and Tutorials</h3>
-                <div class="projects-text mb-5">
-                    I have built sites using the MVC structure, Agile workflow, Sass, CSS animation, flexbox, CSS grid, AJAX, API calls, Parcel and web scraping. Some of these techniques are in use in this site. Others have been used in the projects and tutorials.
+                <h3 class="u-center-text section-title my-3 py-3">Projects</h3>
+
+
+                <div class="project-section animate">
+                    <div class="middle d-flex align-items-center">
+                        <img
+                            src="img/refuge_screenshot.jpg" />
+                    </div>
+                    <div class="left title">
+                        <div class="content">
+                            <h2 class="projects__caption">Refuge</h2>
+                            <p>A working static website for a band. Features include viewing videos in full screen, streaming tunes and links to
+                            purchase tickets for shows.</p>
+                            <a href="#" class="btn-primary">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="right tiles d-flex align-items-center">
+                        <div>
+                        <img
+                            src="img/refuge_screenshot.jpg" />
+                        <img
+                            src="img/refuge_screenshot.jpg" />
+                        <img
+                            src="img/refuge_screenshot.jpg" />
+                        <img
+                            src="img/refuge_screenshot.jpg" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <div class="middle">
+                        <img
+                            src="img/kahuna_screenshot2.png" />
+                    </div>
+                    <div class="right title">
+                        <div class="content">
+                            <h2>Kahuna Guitars</h2>
+                            <p>A mock up of a guitar shop site to showcase a react shopping cart. Uses state and context. </p>
+                        </div>
+                    </div>
+
+                    <div class="left tiles">
+                        <img
+                            src="img/kahuna_screenshot2.png" />
+                        <img
+                            src="img/kahuna_screenshot2.png" />
+                        <img
+                            src="img/kahuna_screenshot2.png" />
+                        <img
+                            src="img/kahuna_screenshot2.png" />
+                    </div>
 
                 </div>
-                <div class="slider">
+
+                <div class="project-section">
+                    <div class="middle">
+                        <img
+                            src="img/zappaquiz_screenshot.png" />
+                    </div>
+                    <div class="left title">
+                        <div class="content">
+                            <h2>Zappaquiz</h2>
+                            <p>A quiz app made in React about the musician Frank Zappa. Uses props, hooks and lifting the state.</p>
+                        </div>
+                    </div>
+
+                    <div class="right tiles">
+                        <img
+                            src="img/zappaquiz_screenshot.png" />
+                        <img
+                            src="img/zappaquiz_screenshot.png" />
+                        <img
+                            src="img/zappaquiz_screenshot.png" />
+                        <img
+                            src="img/zappaquiz_screenshot.png" />
+                      </div>
+
+                </div>
+
+                <div class="project-section">
+                    <div class="middle">
+                        <img
+                            src="img/coquireca2.png" />
+                    </div>
+                    <div class="right title">
+                        <div class="content">
+                            <h2>Coqui Reca</h2>
+                            <p>A work in progress for a London based musician.</p>
+                        </div>
+                    </div>
+
+                    <div class="left tiles">
+                        <img
+                            src="img/coquireca2.png" />
+                        <img
+                            src="img/coquireca2.png" />
+                        <img
+                            src="img/coquireca2.png" />
+                        <img
+                            src="img/coquireca2.png" />
+                      </div>
+
+                </div>
+                
+                <!-- <div class="projects-text mb-5">
+                    I have built sites using the MVC structure, Agile workflow, Sass, CSS animation, flexbox, CSS grid, AJAX, API calls, Parcel and web scraping. Some of these techniques are in use in this site. Others have been used in the projects and tutorials.
+
+                </div> -->
+                <!-- <div class="slider">
                     <div class="slide">
                         <a href="http:\\officialrefuge.com" target="blank" class=" projects__card projects projects__card--slider">
                             <img src="img/refuge_screenshot.png" alt="Refuge band homepage screenshot" class="projects__img">
@@ -230,40 +373,55 @@
                     <button class="slider__btn slider__btn--left">&larr;</button>
                     <button class="slider__btn slider__btn--right">&rarr;</button>
                     <div class="dots"></div>
-                </div>
+                </div> -->
             </div>
         </section>
 
         <!-- Footer -->
-        <section id="contact" class="section">
-            <footer class="footer">
-                <div class="contact">
-                    <h2 class="u-center-text mt-3 contact__text">Contact</h2>
+        <section id="contact" class="">
+            <footer class="footer col-12">
+                <div class="contact col-10 mt-5">
+                    <div class="contact__border"></div>
+                    <h2 class="u-center-text mt-5 ">Contact</h2>
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="download-text">
+                            <a href="./text/GideonBerridge.pdf" download="Gideon_Berridge_CV" class="">
+                                <span>Download</span>
+                                <span> My</span>
+                                <span> CV</span>
+                            </a>
+                            <div class="scroll-more">↓</div>
+                        </div>
+                    </div>
                     <div class="footer__text">
-                        <div class="footer__text--contact-details">
+                        
                             <div class="footer__text--email">
-                                <address>
-                                    <a href="mailto:gid.berridge@gmail.com" class="footer__icons--items">
-                                        <img src="./img/email.png" class="u-filter-invert" style="width: 2rem;">
-                                        gid.berridge@gmail.com
+                                
+                            </div>
+                            <div class="footer__icons mt-3">
+                                
+                                <div>
+                                    <a href="https://github.com/GidBerridge" target="blank" class="footer__icons--items">
+                                        <img src="./img/github.svg" alt="GitHub icon" class="footer__icons--items">
                                     </a>
-                                </address>
+                                </div>
+                                <div>
+                                    <address>
+                                        <a href="mailto:gid.berridge@gmail.com" class="footer__icons--items">
+                                            <img src="./img/email.png" class="mx-5">
+                                        </a>
+                                    </address>
+                                </div>
+                                <div>
+                                    <a href="https://www.linkedin.com/in/gideon-berridge/" target="blank" class="footer__icons--items">
+                                        <img src="./img/linkedin.svg" alt="LinkedIn icon" class="ml-2">
+                                    </a>
+                                </div>
                             </div>
                         
-                        </div>
+                        
                         <div class="d-flex justify-content-center w-100">
-                            <div class="footer__icons mt-3">
-                                <p>
-                                    <a href="https://github.com/GidBerridge" target="blank" class="footer__icons--items">
-                                        <img src="./img/github.svg" alt="GitHub icon" class="footer__icons--items u-filter-invert"> GitHub
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href="https://www.linkedin.com/in/gideon-berridge/" target="blank" class="footer__icons--items">
-                                        <img src="./img/linkedin.svg" alt="LinkedIn icon" class="ml-2 u-filter-invert"> LinkedIn
-                                    </a>
-                                </p>
-                            </div>
+                            
                         </div>
                     </div>
             </footer>

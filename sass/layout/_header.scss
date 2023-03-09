@@ -1,5 +1,5 @@
 .header {
-  background: $color-orange-cv;
+  background: $color-grey-dark;
   position: fixed;
   width: 100%;
   top: 0;
@@ -23,7 +23,7 @@
   align-items: center;
 
   &__text {
-    color: $color-grey-dark !important;
+    color: $color-orange-cv-2 !important;
     font-family: raleway, sans-serif;
     font-size: 1.5rem;
     padding: 0 1.5rem;

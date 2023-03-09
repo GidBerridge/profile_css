@@ -35,7 +35,7 @@
   &__icons {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0.5rem 0 !important;
     width: 100%;
 
@@ -58,12 +58,11 @@
 .contact {
   width: 100%;
   margin: 0 auto;
-  width: 21rem;
+  text-align: center;
+  font-size: 3rem;
 
-  &__text {
-    border-bottom: 1px solid $color-white;
+  &__border{
+    border-top: 1px solid $color-black;
     padding: 0.5rem;
-
-    text-align: center;
   }
 }

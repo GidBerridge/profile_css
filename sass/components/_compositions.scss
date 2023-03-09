@@ -4,7 +4,6 @@
   &__photo {
     width: 55%;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
-    // border-radius: 12px;
     position: absolute;
     z-index: 10;
     transition: all 0.2s;
@@ -34,4 +33,10 @@
   &:hover &__photo:not(:hover) {
     transform: scale(0.95);
   }
+}
+
+#projects {
+  background-color: rgb(176, 137, 109);
+  border-radius: 10px;
+  margin: 0 2rem;
 }
