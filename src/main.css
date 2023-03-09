@@ -256,11 +256,11 @@ text tspan {
   text-align: center;
   color: #b9dfff;
   font-family: "Zefani";
-  margin: 6rem auto 2rem auto;
+  margin: 7rem auto 2rem auto;
   position: relative;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff, 0 0 35px #228dff, 0 0 40px #228dff;
   animation-name: fadeUpSlow;
-  animation-duration: 12s;
+  animation-duration: 2s;
   animation-iteration-count: 1;
 }
 .download-text a {
@@ -419,6 +419,10 @@ ul {
   font-size: 1.5rem;
 }
 
+.section-title {
+  font-size: 4rem;
+}
+
 .about-sub {
   padding: 1rem;
   font-size: 20px;
@@ -502,7 +506,7 @@ button:focus {
 }
 
 #projects {
-  background-color: rgb(160, 89, 38);
+  background-color: rgb(176, 137, 109);
   border-radius: 10px;
   margin: 0 2rem;
 }
@@ -1070,7 +1074,7 @@ button:focus {
 .footer__icons {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0.5rem 0 !important;
   width: 100%;
 }
@@ -1091,12 +1095,12 @@ button:focus {
 .contact {
   width: 100%;
   margin: 0 auto;
-  width: 21rem;
-}
-.contact__text {
-  border-bottom: 1px solid #fff;
-  padding: 0.5rem;
   text-align: center;
+  font-size: 3rem;
+}
+.contact__border {
+  border-top: 1px solid #000;
+  padding: 0.5rem;
 }
 
 .background-light {
