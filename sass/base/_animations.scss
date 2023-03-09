@@ -344,9 +344,9 @@ text tspan {
   text-align: center;
   color: #b9dfff;
   font-family: "Zefani";
-  margin: 3rem auto;
+  margin: 6rem auto 2rem auto;
   position: relative;
-  padding: 2rem 0 9rem;
+  // padding: 2rem 0;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff, 0 0 35px #228dff, 0 0 40px #228dff;
   animation-name: fadeUpSlow;
   animation-duration: 12s;
@@ -369,10 +369,10 @@ text tspan {
   text-align: center;
   width: 450px;
   position: absolute;
-  bottom: 13rem;
+  bottom: 4rem;
   left: calc(50% - 225px);
   margin: 0 auto;
-  font-size: 6rem;
+  font-size: 5rem;
   opacity: 1;
   transition: opacity 0.3s ease;
   font-family: monospace;
