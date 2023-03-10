@@ -8,7 +8,7 @@
   }
 
   &--about {
-    color: $color-orange-cv;
+    color: $color-orange;
     background: $color-grey-cv;
     max-width: 45rem;
     padding: 1rem;
@@ -51,6 +51,9 @@
       width: 3rem;
       margin: 1rem;
       border-radius: 5px;
+    }
+    &:hover {
+      scale: 1.3;
     }
   
 }

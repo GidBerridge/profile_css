@@ -37,6 +37,7 @@ $lg: 992px;
     width: 100%;
     position: relative;
     height: 300px;
+    
 
     .left,
     .middle,
@@ -50,12 +51,17 @@ $lg: 992px;
         padding: 30px;
         text-align: center;
         overflow: hidden;
+        // border-radius: 5px;
 
         @include transition;
 
         .content {
             @media (min-width: $sm) {
                 @include vertical-align();
+            }
+            &__title {
+                color: $color-tertiary-dark;
+                font-size: 2rem;
             }
         }
 
@@ -109,7 +115,7 @@ $lg: 992px;
     }
 
     .title {
-        background: tomato;
+        background: #e18b52;
 
         h2 {
             margin-top: 0;
@@ -128,6 +134,7 @@ $lg: 992px;
         clear: both;
         display: none;
         float: none;
+        
 
         img {
             width: 50%;
