@@ -20,9 +20,7 @@
 }
 
 
-$sm: 480px;
-$md: 768px;
-$lg: 992px;
+
 
 
 
@@ -62,11 +60,21 @@ $lg: 992px;
             &__title {
                 color: $color-tertiary-dark;
                 font-size: 2rem;
+
+                @media (min-width: $md) {
+                font-size: 1.5rem;
+                }
+                @media (min-width: $lg) {
+                font-size: 2rem;
+                }
             }
             &__tools {
                 color: #ffe493;
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
+                font-size: 1rem;
+                
+                @media (min-width: $lg) {
+                    font-size: 1.5rem;
+                }
             }
         }
 

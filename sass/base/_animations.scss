@@ -104,13 +104,36 @@
 
   100% {
     font-size: 70px;
+    fill: #713814;  
+  }
+}
+
+@keyframes textAnimPhone {
+  0% {
+    font-size: 40px;
+    fill: #713814;
+  }
+
+  10% {
+    font-size: 60px;
+    fill: red;
+  }
+
+  40% {
+    font-size: 30px;
+    fill: #713814;
+  }
+
+  100% {
+    font-size: 40px;
     fill: #713814;
   }
 }
 
+
 @-webkit-keyframes textAnim {
   0% {
-    font-size: 80px;
+    font-size: 0px;
     fill: white;
   }
 
@@ -133,8 +156,12 @@
 text tspan {
   font-family: Raleway;
   font-weight: 900;
+  font-size: 5px;
   animation: textAnim 2s ease forwards;
   -webkit-animation: textAnim 2s ease forwards;
+  @include respond(phone) {
+    animation: textAnimPhone 2s ease forwards;
+  }
 }
 
 #l1 {
@@ -200,13 +227,17 @@ text tspan {
 
 .fly-in li {
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 5px;
   font-family: sans-serif, helvetica;
   font-weight: 300;
   font-size: 38px;
   color: #032f86;
   opacity: 1;
   transition: all 1.8s cubic-bezier(0.6, -.005, 0.32, 1.75);
+
+  @media (min-width: $md) {
+    margin-right: 30px;
+}
 }
 
 .fly-in.hidden li {
@@ -403,6 +434,7 @@ text tspan {
       animation-fill-mode: forwards;
       animation-delay: calc(0.05s * var(--char-index));
       animation-duration: calc(0.2s + (0.03s * var(--char-total)));
+  }
 }
 
 @keyframes pull-char {
@@ -416,7 +448,7 @@ text tspan {
     transform: scale(0.5) translateX(calc(-1.5em * var(--distance-sine)));
   }
 }
-}
+
 
 /* ---------------------------------- */
 

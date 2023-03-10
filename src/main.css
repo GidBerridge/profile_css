@@ -89,11 +89,35 @@
     fill: #713814;
   }
 }
+@keyframes textAnimPhone {
+  0% {
+    font-size: 40px;
+    fill: #713814;
+  }
+  10% {
+    font-size: 60px;
+    fill: red;
+  }
+  40% {
+    font-size: 30px;
+    fill: #713814;
+  }
+  100% {
+    font-size: 40px;
+    fill: #713814;
+  }
+}
 text tspan {
   font-family: Raleway;
   font-weight: 900;
+  font-size: 5px;
   animation: textAnim 2s ease forwards;
   -webkit-animation: textAnim 2s ease forwards;
+}
+@media only screen and (max-width: 37.5em) {
+  text tspan {
+    animation: textAnimPhone 2s ease forwards;
+  }
 }
 
 #l1 {
@@ -154,13 +178,18 @@ text tspan {
 
 .fly-in li {
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 5px;
   font-family: sans-serif, helvetica;
   font-weight: 300;
   font-size: 38px;
   color: #032f86;
   opacity: 1;
   transition: all 1.8s cubic-bezier(0.6, -0.005, 0.32, 1.75);
+}
+@media (min-width: 768px) {
+  .fly-in li {
+    margin-right: 30px;
+  }
 }
 
 .fly-in.hidden li {
@@ -304,6 +333,7 @@ text tspan {
   animation-delay: calc(0.05s * var(--char-index));
   animation-duration: calc(0.2s + 0.03s * var(--char-total));
 }
+
 @keyframes pull-char {
   20% {
     transition: transform 1s cubic-bezier(0.8, 0, 0.2, 1);
@@ -314,7 +344,6 @@ text tspan {
     transform: scale(0.5) translateX(calc(-1.5em * var(--distance-sine)));
   }
 }
-
 /* ---------------------------------- */
 .bounce-it {
   color: #130378;
@@ -480,7 +509,6 @@ button:focus {
 
 .button {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  margin: 1rem;
 }
 .button__profile {
   color: #2a2a2a;
@@ -529,6 +557,21 @@ button:focus {
 #projects {
   background-color: rgb(176, 137, 109);
   border-radius: 10px;
+  display: none;
+}
+@media (min-width: 576px) {
+  #projects {
+    display: block;
+  }
+}
+
+#carousel {
+  display: block;
+}
+@media (min-width: 576px) {
+  #carousel {
+    display: none;
+  }
 }
 
 .projects__card {
@@ -580,6 +623,9 @@ button:focus {
   width: 100%;
 }
 
+.skills-card {
+  transition: scale 0.3s ease-in;
+}
 .skills-card img {
   width: 3rem;
   margin: 1rem;
@@ -686,12 +732,7 @@ button:focus {
 }
 @media only screen and (max-width: 37.5em) {
   .slider {
-    height: 35rem;
-  }
-}
-@media only screen and (max-width: 475px) {
-  .slider {
-    height: 27rem;
+    height: 29rem;
   }
 }
 
@@ -807,7 +848,7 @@ button:focus {
   overflow: hidden;
   transition: 0.3s ease-in-out all;
 }
-@media (min-width: 480px) {
+@media (min-width: 576px) {
   .project-section .left .content,
   .project-section .middle .content,
   .project-section .right .content {
@@ -822,14 +863,34 @@ button:focus {
   color: #713814;
   font-size: 2rem;
 }
+@media (min-width: 768px) {
+  .project-section .left .content__title,
+  .project-section .middle .content__title,
+  .project-section .right .content__title {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .project-section .left .content__title,
+  .project-section .middle .content__title,
+  .project-section .right .content__title {
+    font-size: 2rem;
+  }
+}
 .project-section .left .content__tools,
 .project-section .middle .content__tools,
 .project-section .right .content__tools {
   color: #ffe493;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
 }
-@media (min-width: 480px) {
+@media (min-width: 992px) {
+  .project-section .left .content__tools,
+  .project-section .middle .content__tools,
+  .project-section .right .content__tools {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 576px) {
   .project-section .left,
   .project-section .middle,
   .project-section .right {
@@ -861,7 +922,7 @@ button:focus {
 .project-section.animate .left {
   left: 0;
 }
-@media (min-width: 480px) {
+@media (min-width: 576px) {
   .project-section.animate .left {
     left: 50%;
   }
@@ -874,7 +935,7 @@ button:focus {
 .project-section.animate .right {
   left: 0;
 }
-@media (min-width: 480px) {
+@media (min-width: 576px) {
   .project-section.animate .right {
     left: 50%;
   }
