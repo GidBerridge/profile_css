@@ -59,6 +59,10 @@ $lg: 992px;
             @media (min-width: $sm) {
                 @include vertical-align();
             }
+            &__title {
+                color: $color-tertiary-dark;
+                font-size: 2rem;
+            }
         }
 
         @media (min-width: $sm) {
@@ -111,7 +115,7 @@ $lg: 992px;
     }
 
     .title {
-        background: tomato;
+        background: #e18b52;
 
         h2 {
             margin-top: 0;
