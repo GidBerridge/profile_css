@@ -478,6 +478,22 @@ button:focus {
   outline: none !important;
 }
 
+.button {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.button__profile {
+  color: #2a2a2a;
+  background-color: #ffdfa7 !important;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  border: 1px solid #2a2a2a;
+  transition: background-color 0.3s ease;
+}
+.button__profile:hover {
+  color: #2a2a2a;
+  background-color: #feb22e !important;
+}
+
 .composition {
   position: relative;
 }
@@ -804,6 +820,13 @@ button:focus {
 .project-section .right .content__title {
   color: #713814;
   font-size: 2rem;
+}
+.project-section .left .content__tools,
+.project-section .middle .content__tools,
+.project-section .right .content__tools {
+  color: #ffe493;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 @media (min-width: 480px) {
   .project-section .left,
