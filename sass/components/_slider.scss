@@ -6,12 +6,12 @@
   overflow: hidden;
 
   @include respond(phone) {
-    height: 35rem;
+    height: 29rem;
   }
 
-  @media only screen and (max-width: 475px) {
-    height: 27rem;
-  }
+  // @media only screen and (max-width: 475px) {
+  //   height: 27rem;
+  // }
 }
 
 .slide {

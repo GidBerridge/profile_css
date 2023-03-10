@@ -47,10 +47,12 @@
 }
 
 .skills-card {
+  transition: scale 0.3s ease-in;
     img{
       width: 3rem;
       margin: 1rem;
       border-radius: 5px;
+      
     }
     &:hover {
       scale: 1.3;
