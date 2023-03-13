@@ -1,3 +1,21 @@
 button:focus {
   outline: none !important;
 }
+
+.button {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  &__profile {
+    color: $color-grey-dark;
+    background-color: $color-orange-light !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    border: 1px solid $color-grey-dark;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      color: $color-grey-dark;
+      background-color: $color-orange-dark!important;
+      
+    }
+  }
+}

@@ -20,9 +20,7 @@
 }
 
 
-$sm: 480px;
-$md: 768px;
-$lg: 992px;
+
 
 
 
@@ -37,6 +35,7 @@ $lg: 992px;
     width: 100%;
     position: relative;
     height: 300px;
+    
 
     .left,
     .middle,
@@ -50,12 +49,32 @@ $lg: 992px;
         padding: 30px;
         text-align: center;
         overflow: hidden;
+        // border-radius: 5px;
 
         @include transition;
 
         .content {
             @media (min-width: $sm) {
                 @include vertical-align();
+            }
+            &__title {
+                color: $color-tertiary-dark;
+                font-size: 2rem;
+
+                @media (min-width: $md) {
+                font-size: 1.5rem;
+                }
+                @media (min-width: $lg) {
+                font-size: 2rem;
+                }
+            }
+            &__tools {
+                color: #ffe493;
+                font-size: 1rem;
+                
+                @media (min-width: $lg) {
+                    font-size: 1.5rem;
+                }
             }
         }
 
@@ -109,7 +128,7 @@ $lg: 992px;
     }
 
     .title {
-        background: tomato;
+        background: #e18b52;
 
         h2 {
             margin-top: 0;
@@ -128,6 +147,7 @@ $lg: 992px;
         clear: both;
         display: none;
         float: none;
+        
 
         img {
             width: 50%;

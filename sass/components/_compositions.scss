@@ -38,5 +38,15 @@
 #projects {
   background-color: rgb(176, 137, 109);
   border-radius: 10px;
-  margin: 0 2rem;
+  display: none;
+  @media (min-width: $sm) {
+      display: block;
+    }
+}
+#carousel {
+
+  display: block;
+  @media (min-width: $sm) {
+      display: none;
+    }
 }

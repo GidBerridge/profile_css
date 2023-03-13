@@ -39,12 +39,15 @@
     margin: 0.5rem 0 !important;
     width: 100%;
 
+    
+
     &--items {
       width: 8rem;
+      transition: scale 0.3s ease;
 
       &:hover {
-        scale: 1.3;
-      }
+          scale: 1.3;
+        }
     }
 
     img {
@@ -67,6 +70,10 @@
 
   &__border{
     border-top: 1px solid $color-black;
+    padding: 0.5rem;
+  }
+  &__border-bottom{
+    border-bottom: 1px solid $color-black;
     padding: 0.5rem;
   }
 }
