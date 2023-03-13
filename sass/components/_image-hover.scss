@@ -57,24 +57,24 @@
     font-size: 1.2rem;
   }
 
-  &:hover &__caption {
-    opacity: 1;
-    transform: translate(-50%, -250%);
+  // &:hover &__caption {
+  //   opacity: 1;
+  //   transform: translate(-50%, -250%);
 
     
-  }
+  // }
 
-  &:hover &__text {
-    opacity: 1;
-    transform: translate(-50%, -20%);
+  // &:hover &__text {
+  //   opacity: 1;
+  //   transform: translate(-50%, -20%);
 
     
-  }
+  // }
 
-  &:hover &__img {
-    transform: scale(0.9);
-    filter: blur(3px) brightness(40%);
-  }
+  // &:hover &__img {
+  //   transform: scale(0.9);
+  //   filter: blur(3px) brightness(40%);
+  // }
 }
 
 

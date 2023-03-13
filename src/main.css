@@ -710,18 +710,6 @@ button:focus {
 .projects p {
   font-size: 1.2rem;
 }
-.projects:hover .projects__caption {
-  opacity: 1;
-  transform: translate(-50%, -250%);
-}
-.projects:hover .projects__text {
-  opacity: 1;
-  transform: translate(-50%, -20%);
-}
-.projects:hover .projects__img {
-  transform: scale(0.9);
-  filter: blur(3px) brightness(40%);
-}
 
 .slider {
   max-width: 45rem;
@@ -819,6 +807,7 @@ button:focus {
 
 .slider__icon {
   padding: 1rem;
+  border: none !important;
 }
 .slider__icon img {
   height: 3rem;
