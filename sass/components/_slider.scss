@@ -99,9 +99,14 @@
 }
 
 .slider__icon {
+  // position: absolute;
+  // top: 1rem;
+  // left: 1rem;
   padding: 1rem;
+  border: none!important;
 
   img {
     height: 3rem;
+    
   }
 }
