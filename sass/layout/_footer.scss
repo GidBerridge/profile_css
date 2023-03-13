@@ -41,6 +41,10 @@
 
     &--items {
       width: 8rem;
+
+      &:hover {
+        scale: 1.3;
+      }
     }
 
     img {
