@@ -107,6 +107,24 @@
     fill: #713814;
   }
 }
+@-webkit-keyframes textAnim {
+  0% {
+    font-size: 0px;
+    fill: white;
+  }
+  10% {
+    font-size: 100px;
+    fill: red;
+  }
+  40% {
+    font-size: 70px;
+    fill: orange;
+  }
+  100% {
+    font-size: 80px;
+    fill: white;
+  }
+}
 text tspan {
   font-family: Raleway;
   font-weight: 900;
@@ -265,6 +283,17 @@ text tspan {
     opacity: 1;
   }
 }
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, to {
+    transform: translateZ(-2px) translateY(5px);
+  }
+  40% {
+    transform: rotateY(180deg) translateZ(-2px) translateY(-35px);
+  }
+  60% {
+    transform: translateZ(-2px) translateY(-25px);
+  }
+}
 @keyframes bounce {
   0%, 20%, 50%, 80%, to {
     transform: translateZ(-2px) translateY(5px);
@@ -314,6 +343,7 @@ text tspan {
   pointer-events: none;
   z-index: -1;
   transform-origin: center;
+  -webkit-animation: bounce 3s cubic-bezier(0.37, 0, 0.21, 1.02) infinite, fonts 5s linear infinite;
   animation: bounce 3s cubic-bezier(0.37, 0, 0.21, 1.02) infinite, fonts 5s linear infinite;
 }
 
@@ -478,25 +508,21 @@ ul {
 }
 
 .u-clip-path-skills {
-  -webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0 100%);
-          clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0 100%);
+  clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0 100%);
 }
 @media only screen and (max-width: 56.25em) {
   .u-clip-path-skills {
-    -webkit-clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0 100%);
-            clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0 100%);
   }
 }
 @media only screen and (max-width: 37.5em) {
   .u-clip-path-skills {
-    -webkit-clip-path: polygon(0% 7%, 100% 0%, 100% 100%, 0 100%);
-            clip-path: polygon(0% 7%, 100% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(0% 7%, 100% 0%, 100% 100%, 0 100%);
   }
 }
 
 .u-clip-path-about {
-  -webkit-clip-path: polygon(0% 10%, 100% 0, 100% 100%, 0 90%);
-          clip-path: polygon(0% 10%, 100% 0, 100% 100%, 0 90%);
+  clip-path: polygon(0% 10%, 100% 0, 100% 100%, 0 90%);
 }
 
 .u-filter-invert {
@@ -644,8 +670,7 @@ button:focus {
   position: relative;
 }
 .projects__img {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   overflow: hidden;
   transition: all 0.5s;
 }
@@ -662,8 +687,7 @@ button:focus {
   color: #fff;
   opacity: 0;
   transition: all 0.5s;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   font-size: 1rem;
   padding: 1rem;
   transform: translate(-50%, 200%);
@@ -683,8 +707,7 @@ button:focus {
   color: #fff;
   opacity: 0;
   transition: all 0.5s;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   text-transform: uppercase;
   font-size: 2rem;
   transform: translate(-50%, -500%);
@@ -752,8 +775,7 @@ button:focus {
   /* Only for images that have different size than slide */
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .slider__btn {
@@ -825,7 +847,9 @@ button:focus {
 }
 
 .animated {
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
@@ -846,6 +870,9 @@ button:focus {
   padding: 30px;
   text-align: center;
   overflow: hidden;
+  -moz-transition: 0.3s ease-in-out all;
+  -o-transition: 0.3s ease-in-out all;
+  -webkit-transition: 0.3s ease-in-out all;
   transition: 0.3s ease-in-out all;
 }
 @media (min-width: 576px) {
@@ -854,6 +881,8 @@ button:focus {
   .project-section .right .content {
     position: relative;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
 }
@@ -967,6 +996,9 @@ button:focus {
   float: left;
   height: auto;
   opacity: 0.7;
+  -moz-transition: 0.3s ease-in-out all;
+  -o-transition: 0.3s ease-in-out all;
+  -webkit-transition: 0.3s ease-in-out all;
   transition: 0.3s ease-in-out all;
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -1056,6 +1088,7 @@ button:focus {
   width: 25px;
   height: 3px;
   margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #713814;
 }
