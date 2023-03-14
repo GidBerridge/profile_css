@@ -20,7 +20,8 @@ export function hamburgerMenu() {
         }
     });
 
-    const mobileMenu = function() {
+    const mobileMenu = function () {
+        console.log('clicked')
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
     }
@@ -30,15 +31,10 @@ export function hamburgerMenu() {
         navMenu.classList.remove("active");
     }
 
-    
-        hamburger.addEventListener("click", mobileMenu);
 
-        // navLink.forEach(n => n.addEventListener("click", closeMenu));
+    hamburger.addEventListener("click", mobileMenu);
 
- };
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+};
 // export default hamburgerMenu;
-
-
-
-
-
