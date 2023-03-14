@@ -160,6 +160,16 @@ text tspan {
   -webkit-animation-delay: 3.7s;
 }
 
+.text {
+  text-align: center;
+  color: #032f86;
+  font-family: sans-serif, helvetica;
+  margin-top: 70px;
+  font-size: 250%;
+  font-weight: 400;
+  text-shadow: 2px 1px 2px #eee;
+}
+
 .fly-in {
   display: flex;
   justify-content: center;
@@ -178,8 +188,7 @@ text tspan {
 }
 @media (min-width: 768px) {
   .fly-in li {
-    margin-right: 25px;
-    font-size: 58px;
+    margin-right: 30px;
   }
 }
 
@@ -379,47 +388,6 @@ text tspan {
     transform: translateY(-40%) scale(0.8, 1.2);
   }
 }
-.u-line-grow {
-  animation: grow 4s ease-in;
-}
-
-@keyframes grow {
-  0% {
-    width: 0%;
-    opacity: 0;
-  }
-  60% {
-    width: 0%;
-    opacity: 0;
-  }
-  100% {
-    width: 100%;
-    opacity: 1;
-  }
-}
-.u-line-grow10 {
-  animation: grow10 10s ease-in;
-}
-
-@keyframes grow10 {
-  0% {
-    width: 0%;
-    opacity: 0;
-  }
-  80% {
-    width: 0%;
-    opacity: 0;
-  }
-  100% {
-    width: 100%;
-    opacity: 1;
-  }
-}
-.skillFade {
-  animation-name: fadeUpSlow;
-  animation-duration: 12s;
-}
-
 .scale {
   animation-name: scaleUp;
   animation-duration: 10s;
@@ -1307,4 +1275,6 @@ button:focus {
 
 .skew {
   transform: skewy(-5deg);
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=/main.55cc96c8.css.map */

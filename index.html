@@ -41,7 +41,7 @@
 
 <body>
     <!-- background -->
-    <video id="background-video" autoplay muted loop poster="">
+    <video id="background-video" autoplay muted loop playsinline poster="">
         <source src="img/bg.mp4" type="video/mp4">
     </video>
     <div class="overlay"></div>
@@ -81,7 +81,7 @@
                 <div class="">
                     <div class="pt-5 mt-md-5 d-flex flex-column align-items-center">
                         
-                        <div class="heading-primary heading-primary--main">Hi! I'm</div>
+                        <!-- <div class="heading-primary heading-primary--main">Hi! I'm</div> -->
 
                         <div class="col-12 justify-content-center">
                             <div>
@@ -101,9 +101,14 @@
                                 </ul>
                             </div>
                         </div>
+                        <div class="col-12 d-flex justify-content-center">
+                            <div class="col-10">
+                                <div class="contact__border u-line-grow"></div>
+                            </div>
+                        </div>
 
-                        <div class="heading-primary heading-primary--sub">I'm a</div>
-                        <div class="fadeUp col-12 my-4 frontend">
+                        <!-- <div class="heading-primary heading-primary--sub">I'm a</div> -->
+                        <div class="fadeUp col-12 my-md-4 frontend">
                             <svg width="100%" height="87">
                                 <text x="50%" y="65" text-anchor="middle">
                                     <tspan id="l1">F</tspan>
@@ -138,7 +143,7 @@
                 </div>
                 <div class="col-12 d-flex justify-content-center">
                     <div class="col-10 mt-5">
-                        <div class="contact__border"></div>
+                        <div class="contact__border u-line-grow10"></div>
                     </div>
                 </div>
             </section>
@@ -146,11 +151,11 @@
             <!-- skills -->
             <section class="z-index">
 
-                <div class="d-flex align-items-center flex-column col-12">
+                <div class="d-flex align-items-center flex-column col-12 skillFade">
                     <div class="skills__text mt-5 mb-3">I use these tools</div>
                     <div class="d-flex justify-content-center flex-wrap col-10 ">
 
-                        <div class="skills-card">
+                        <div class="skills-card scaleUp">
                             <img src="img/HTML.png" alt="HTML 5 Logo">
                         </div>
                         <div class="skills-card">
@@ -186,7 +191,7 @@
                     </div>
                     <div class="col-12 d-flex justify-content-center">
                         <div class="col-10 mt-5">
-                            <div class="contact__border"></div>
+                            <div class="contact__border u-line-grow10"></div>
                         </div>
                     </div>
                 </div>

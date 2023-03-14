@@ -18,6 +18,9 @@
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
     opacity: 0;
+    @include respond(phone) {
+        font-size: 2rem;
+      }
   }
 }
 
