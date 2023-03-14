@@ -110,3 +110,11 @@
     
   }
 }
+
+.carousel-indicators {
+  bottom: -45px!important;
+  [data-bs-target] {
+      background-color: #713814 !important;
+    }
+}
+
