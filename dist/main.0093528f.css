@@ -397,29 +397,6 @@ text tspan {
     opacity: 1;
   }
 }
-.u-line-grow10 {
-  animation: grow10 10s ease-in;
-}
-
-@keyframes grow10 {
-  0% {
-    width: 0%;
-    opacity: 0;
-  }
-  80% {
-    width: 0%;
-    opacity: 0;
-  }
-  100% {
-    width: 100%;
-    opacity: 1;
-  }
-}
-.skillFade {
-  animation-name: fadeUpSlow;
-  animation-duration: 12s;
-}
-
 .scale {
   animation-name: scaleUp;
   animation-duration: 10s;
@@ -1307,4 +1284,6 @@ button:focus {
 
 .skew {
   transform: skewy(-5deg);
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=/main.0093528f.css.map */
