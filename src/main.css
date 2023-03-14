@@ -542,6 +542,11 @@ ul {
 .section-title {
   font-size: 4rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .section-title {
+    font-size: 3rem;
+  }
+}
 
 .about-sub {
   padding: 1rem;
@@ -902,6 +907,13 @@ button:focus {
 }
 .slider__icon img {
   height: 3rem;
+}
+
+.carousel-indicators {
+  bottom: -45px !important;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: #713814 !important;
 }
 
 .animated {
