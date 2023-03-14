@@ -316,11 +316,6 @@ text tspan {
   transform-origin: center;
   animation: bounce 3s cubic-bezier(0.37, 0, 0.21, 1.02) infinite, fonts 5s linear infinite;
 }
-@media only screen and (max-width: 37.5em) {
-  .scroll-more {
-    bottom: 4.5rem;
-  }
-}
 
 .pull-in {
   font-size: 4rem;
@@ -1248,4 +1243,6 @@ button:focus {
 
 .skew {
   transform: skewy(-5deg);
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=/main.6026ac22.css.map */

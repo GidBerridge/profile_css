@@ -412,6 +412,10 @@ text tspan {
   transform-origin: center;
   -webkit-animation: bounce 3s cubic-bezier(0.37, 0, 0.21, 1.02) infinite, fonts 5s linear infinite;
   animation: bounce 3s cubic-bezier(0.37, 0, 0.21, 1.02) infinite, fonts 5s linear infinite;
+
+  @include respond(phone) {
+      bottom: 4.5rem;
+    }
 }
 
 
