@@ -555,7 +555,7 @@ ul {
 }
 
 .frontend tspan {
-  color: #713814 !important;
+  color: #b2b2b2 !important;
 }
 
 .skills__text {
@@ -740,8 +740,7 @@ button:focus {
   position: relative;
 }
 .projects__img {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   overflow: hidden;
   transition: all 0.5s;
 }
@@ -758,8 +757,7 @@ button:focus {
   color: #fff;
   opacity: 0;
   transition: all 0.5s;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   font-size: 1rem;
   padding: 1rem;
   transform: translate(-50%, 200%);
@@ -779,8 +777,7 @@ button:focus {
   color: #fff;
   opacity: 0;
   transition: all 0.5s;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   text-transform: uppercase;
   font-size: 2rem;
   transform: translate(-50%, -500%);
@@ -1086,6 +1083,122 @@ button:focus {
   display: block;
 }
 
+#modal-container {
+  flex-direction: column;
+  display: none;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#modal-container.show {
+  display: flex;
+  opacity: 1;
+}
+
+#modal-content {
+  width: 80%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
+
+.modal-title {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.modal-X {
+  font-family: Lato;
+  font-weight: 100;
+}
+
+#close-modal-button {
+  display: block;
+  padding: 0.5rem 1.25rem;
+  background-color: #5f2878;
+  color: #ffe;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: "VMCircularChatPTT";
+  font-size: 1.2rem;
+}
+
+#close-modal-X {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 36px;
+  font-weight: lighter;
+  cursor: pointer;
+  line-height: 0.6;
+  color: #b2b2b2;
+}
+
+#close-modal-X:hover {
+  color: #000001;
+}
+
+#close-modal-X:active {
+  transform: scale(0.9);
+}
+
+#modal-button {
+  cursor: pointer;
+}
+
+.modal-image-mob,
+.modal-image-desk {
+  width: 100%;
+}
+
+.modal-image-desk {
+  display: none;
+}
+
+#modal-divider {
+  border-top: 1px solid #b2b2b2;
+  margin-bottom: 0.5rem;
+}
+
+#button-container {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  bottom: -25px;
+  width: 100%;
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  #modal-content {
+    width: 90%;
+    height: 95%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .modal-image-mob {
+    display: none;
+  }
+  .modal-image-desk {
+    display: block;
+  }
+}
 .header {
   background: #2a2a2a;
   position: fixed;

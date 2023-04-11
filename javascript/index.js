@@ -3,12 +3,15 @@ import { scroll } from "./smoothScrolling.js";
 import { revealSections } from "./revealSections.js";
 import { gallery } from "./gallery.js";
 import { bg } from "./bg.js";
+import { modal } from "./modal.js";
 
 import { hamburgerMenu } from "./hamburger.js";
 
 Splitting();
 
 bg()
+
+modal()
 
 // gallery
 gallery();
