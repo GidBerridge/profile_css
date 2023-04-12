@@ -1,7 +1,6 @@
 export function modal() {
     const modalButtons = document.getElementsByClassName("modal-button");
     const modalContainer = document.getElementById("modal-container");
-    // const closeModal = document.getElementById("close-modal-X");
     const closeModalButton = document.getElementById("close-modal-button");
 
     const removeShow = () => {
@@ -9,6 +8,7 @@ export function modal() {
         setTimeout(function () {
             modalContainer.style.display = "none";
         }, 210);
+        showButtons();
     }
 
     const showModal = (event) => {
@@ -21,16 +21,25 @@ export function modal() {
                 modalContainer.classList.add("show");
             }, 20);
         }
+        hideButtons();
     };
+
+    const hideButtons = () => {
+        const buttons = document.getElementsByClassName("modal-button");
+        Array.from(buttons).forEach((button) => {
+            button.style.opacity = 0;
+        });
+    }
+    const showButtons = () => {
+        const buttons = document.getElementsByClassName("modal-button");
+        Array.from(buttons).forEach((button) => {
+            button.style.opacity = 1;
+        });
+    }
 
     Array.from(modalButtons).forEach((modalButton) => {
         modalButton.addEventListener("click", showModal, false);
     });
-
-    // closeModal.addEventListener("click", function () {
-        
-    //     removeShow();
-    // });
 
     closeModalButton.addEventListener("click", function () {
         console.log("clicked");

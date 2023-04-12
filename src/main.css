@@ -267,7 +267,7 @@ text tspan {
     transform: translateZ(-2px) translateY(-25px);
   }
 }
-.download-text {
+#download-text {
   font-size: 2rem;
   line-height: 80%;
   transform: rotateX(0) rotateY(-25deg);
@@ -283,10 +283,10 @@ text tspan {
   animation-duration: 2s;
   animation-iteration-count: 1;
 }
-.download-text a {
+#download-text a {
   color: #fff;
 }
-.download-text a:hover, .download-text a:active {
+#download-text a:hover, #download-text a:active {
   color: #130378 !important;
 }
 
@@ -481,6 +481,7 @@ ul {
   top: 0;
   bottom: 0;
   z-index: -10;
+  overflow: hidden;
 }
 
 .overlay {
@@ -492,6 +493,7 @@ ul {
   background-color: #fffdf3;
   z-index: -1;
   opacity: 0.9;
+  overflow: hidden;
 }
 
 .z-index {
@@ -1109,10 +1111,10 @@ button:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  padding: 20px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   overflow-y: auto;
+  z-index: 150;
 }
 
 .modal-title {
@@ -1137,6 +1139,7 @@ button:focus {
   cursor: pointer;
   font-family: "VMCircularChatPTT";
   font-size: 1.2rem;
+  margin: 0.5rem;
 }
 
 #close-modal-X {
@@ -1158,8 +1161,9 @@ button:focus {
   transform: scale(0.9);
 }
 
-#modal-button {
+.modal-button {
   cursor: pointer;
+  z-index: 1;
 }
 
 .modal-image-mob,
