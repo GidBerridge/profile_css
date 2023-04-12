@@ -9,9 +9,9 @@ import { hamburgerMenu } from "./hamburger.js";
 
 Splitting();
 
-bg()
+bg();
 
-modal()
+modal();
 
 // gallery
 gallery();

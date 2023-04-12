@@ -1,7 +1,6 @@
 export function modal() {
     const modalButtons = document.getElementsByClassName("modal-button");
     const modalContainer = document.getElementById("modal-container");
-    // const closeModal = document.getElementById("close-modal-X");
     const closeModalButton = document.getElementById("close-modal-button");
 
     const removeShow = () => {
@@ -26,11 +25,6 @@ export function modal() {
     Array.from(modalButtons).forEach((modalButton) => {
         modalButton.addEventListener("click", showModal, false);
     });
-
-    // closeModal.addEventListener("click", function () {
-        
-    //     removeShow();
-    // });
 
     closeModalButton.addEventListener("click", function () {
         console.log("clicked");

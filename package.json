@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w",
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
-  },
+        "compile:sass": "node-sass sass/main.scss css/style.css -w",
+        "start": "parcel index.html",
+        "build": "parcel build index.html"
+    },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GidBerridge/profile_css.git"
