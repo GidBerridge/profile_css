@@ -267,7 +267,7 @@ text tspan {
     transform: translateZ(-2px) translateY(-25px);
   }
 }
-#download-text {
+.download-text {
   font-size: 2rem;
   line-height: 80%;
   transform: rotateX(0) rotateY(-25deg);
@@ -283,10 +283,10 @@ text tspan {
   animation-duration: 2s;
   animation-iteration-count: 1;
 }
-#download-text a {
+.download-text a {
   color: #fff;
 }
-#download-text a:hover, #download-text a:active {
+.download-text a:hover, .download-text a:active {
   color: #130378 !important;
 }
 
@@ -1436,4 +1436,6 @@ button:focus {
 
 .skew {
   transform: skewy(-5deg);
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=/main.6ef1a890.css.map */

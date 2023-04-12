@@ -267,7 +267,7 @@ text tspan {
     transform: translateZ(-2px) translateY(-25px);
   }
 }
-#download-text {
+.download-text {
   font-size: 2rem;
   line-height: 80%;
   transform: rotateX(0) rotateY(-25deg);
@@ -283,10 +283,10 @@ text tspan {
   animation-duration: 2s;
   animation-iteration-count: 1;
 }
-#download-text a {
+.download-text a {
   color: #fff;
 }
-#download-text a:hover, #download-text a:active {
+.download-text a:hover, .download-text a:active {
   color: #130378 !important;
 }
 
@@ -1111,6 +1111,7 @@ button:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
+  padding: 20px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   overflow-y: auto;
@@ -1139,7 +1140,6 @@ button:focus {
   cursor: pointer;
   font-family: "VMCircularChatPTT";
   font-size: 1.2rem;
-  margin: 0.5rem;
 }
 
 #close-modal-X {
@@ -1436,4 +1436,6 @@ button:focus {
 
 .skew {
   transform: skewy(-5deg);
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=/main.4aee42d8.css.map */
