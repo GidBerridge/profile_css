@@ -1,26 +1,3 @@
-@mixin project-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: $color-white;
-  opacity: 0;
-  transition: all 0.5s;
-  backface-visibility: hidden;
-}
-
-@mixin card {
-  width: 100%;
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  border-radius: 10px !important;
-  border: solid 2px $color-orange !important;
-  position: relative;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-
 @mixin respond($breakpoint) {
   @if $breakpoint ==phone {
     @media only screen and (max-width: 37.5em) {
