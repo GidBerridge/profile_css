@@ -42,7 +42,6 @@ export function modal() {
     });
 
     closeModalButton.addEventListener("click", function () {
-        console.log("clicked");
         removeShow();
     });
 
